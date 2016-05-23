@@ -10,6 +10,9 @@ elseif(${CMAKE_Fortran_COMPILER_ID} MATCHES GNU)
     set(CMAKE_Fortran_FLAGS "-O")
 endif(${CMAKE_Fortran_COMPILER_ID} MATCHES Intel)
 
+# activate ctest
+include(CTest)
+enable_testing()
 
 add_subdirectory("src")
 add_subdirectory("test")
